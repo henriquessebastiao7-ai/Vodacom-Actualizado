@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protótipo académico de redesenho da experiência digital da Vodacom Moçambique.">
+  <meta name="theme-color" content="#e60000">
+  <title>Vodacom Moçambique | Experiência Digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="Vodacom, página inicial"><span class="brand-mark">V</span><span>vodacom<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">☰</button>
+      <nav id="mainNav" class="main-nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a><a href="#vantagens">Vantagens</a><a href="#ajuda">Ajuda</a>
+        <a class="nav-cta" href="#servicos">Explorar ofertas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">CONECTAMOS MOÇAMBIQUE</p>
+          <h1>O que precisas,<br><span>num só lugar.</span></h1>
+          <p class="hero-copy">Encontra serviços, compara ofertas e organiza as tuas escolhas de forma simples e rápida.</p>
+          <div class="hero-actions"><a class="btn btn-light" href="#servicos">Ver serviços <span aria-hidden="true">→</span></a><a class="text-link" href="#vantagens">Conhecer a plataforma</a></div>
+          <p class="prototype-note">Protótipo académico independente — não é um canal oficial de contratação.</p>
+        </div>
+        <div class="hero-art" aria-label="Ilustração decorativa de conectividade" role="img">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="phone"><div class="phone-speaker"></div><div class="phone-screen"><span class="screen-signal">● ● ●</span><strong>Olá!</strong><span>Mais perto do que importa.</span><div class="screen-card">4G <small>Conectado</small></div><div class="screen-card red-card">M-Pesa <small>Serviços digitais</small></div></div></div>
+          <span class="float-dot dot-a"></span><span class="float-dot dot-b"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick container" aria-label="Acesso rápido">
+      <a href="#servicos"><span class="quick-icon">⌕</span><span><b>Encontrar ofertas</b><small>Pesquisa por nome ou categoria</small></span></a>
+      <a href="#favoritos"><span class="quick-icon">♡</span><span><b>Os meus favoritos</b><small>Guarda o que te interessa</small></span></a>
+      <a href="#ajuda"><span class="quick-icon">?</span><span><b>Precisas de ajuda?</b><small>Consulta as perguntas frequentes</small></span></a>
+    </section>
+
+    <section id="servicos" class="section container">
+      <div class="section-heading"><div><p class="eyebrow red">CATÁLOGO DIGITAL</p><h2>Explora os serviços</h2><p class="muted">Pesquisa, filtra e organiza os serviços disponíveis no protótipo.</p></div><span class="result-count" id="resultCount" aria-live="polite"></span></div>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Pesquisar serviço..." aria-label="Pesquisar serviço por nome ou descrição"></label>
+        <label class="select-label">Categoria
+          <select id="categoryFilter"><option value="Todas">Todas</option><option value="Internet">Internet</option><option value="M-Pesa">M-Pesa</option><option value="Voz e SMS">Voz e SMS</option><option value="Residencial">Residencial</option></select>
+        </label>
+        <label class="select-label">Ordenar por
+          <select id="sortSelect"><option value="name">Nome (A–Z)</option><option value="price-asc">Preço (menor primeiro)</option><option value="price-desc">Preço (maior primeiro)</option></select>
+        </label>
+      </div>
+      <div id="serviceGrid" class="service-grid" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state" hidden>Não foram encontrados serviços. Experimenta alterar a pesquisa ou a categoria.</p>
+      <p class="disclaimer">Nota: preços e benefícios apresentados são exemplos ilustrativos para demonstrar a interface. Consulta os canais oficiais da Vodacom para condições actualizadas.</p>
+    </section>
+
+    <section id="favoritos" class="favorites-section">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow red">LISTA PESSOAL</p><h2>Os teus favoritos</h2><p class="muted">Adiciona ou remove serviços da tua lista. As escolhas ficam guardadas neste navegador.</p></div><span class="favorite-count" id="favoriteCount">0 guardados</span></div>
+        <div id="favoriteGrid" class="service-grid"></div>
+        <p id="favoriteEmpty" class="empty-state">Ainda não guardaste serviços. Usa o botão “Guardar” num dos cartões.</p>
+      </div>
+    </section>
+
+    <section id="vantagens" class="section container">
+      <div class="section-heading"><div><p class="eyebrow red">MELHOR EXPERIÊNCIA</p><h2>Mais simples. Mais claro.</h2></div></div>
+      <div class="benefit-grid">
+        <article class="benefit"><span>01</span><h3>Navegação directa</h3><p>As áreas principais estão organizadas e acessíveis a partir do menu.</p></article>
+        <article class="benefit"><span>02</span><h3>Pesquisa rápida</h3><p>Encontra serviços pelo nome, descrição ou categoria sem percorrer listas longas.</p></article>
+        <article class="benefit"><span>03</span><h3>Adaptável</h3><p>O layout ajusta-se a telemóveis, tablets e computadores.</p></article>
+      </div>
+    </section>
+
+    <section id="ajuda" class="help-section">
+      <div class="container help-grid"><div><p class="eyebrow">CENTRO DE AJUDA</p><h2>Estamos aqui para ajudar.</h2><p>Este protótipo demonstra uma área de apoio com respostas rápidas às dúvidas mais comuns.</p></div>
+        <div class="faq">
+          <details><summary>Como encontro um serviço específico?</summary><p>Escreve o nome ou uma palavra relacionada na caixa de pesquisa e, se necessário, escolhe uma categoria.</p></details>
+          <details><summary>Como guardo um serviço?</summary><p>Selecciona “Guardar” no cartão. O serviço aparece na secção de favoritos e fica guardado no navegador.</p></details>
+          <details><summary>Os preços são oficiais?</summary><p>Não. Os valores do protótipo são ilustrativos. Confirma sempre preços, elegibilidade e condições nos canais oficiais.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark">V</span><span>vodacom<span class="brand-dot">.</span></span></a><p>Projecto académico de Tecnologias Web — UnISCED, 2026.</p><a href="https://www.vodacom.co.mz/" target="_blank" rel="noopener">Website oficial da Vodacom Moçambique ↗</a></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
